@@ -13,6 +13,9 @@
 		F18A52BF21789889003F8C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18A52BE21789889003F8C13 /* Assets.xcassets */; };
 		F18A52C221789889003F8C13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18A52C021789889003F8C13 /* LaunchScreen.storyboard */; };
 		F18A52CB21789D73003F8C13 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52CA21789D73003F8C13 /* Carousel.swift */; };
+		F18A52CE2178AA11003F8C13 /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52CC2178AA11003F8C13 /* CarouselItem.swift */; };
+		F18A52CF2178AA11003F8C13 /* CarouselKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52CD2178AA11003F8C13 /* CarouselKind.swift */; };
+		F18A52D12178B73B003F8C13 /* Carousel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52D02178B73B003F8C13 /* Carousel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F18A52C121789889003F8C13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F18A52C321789889003F8C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F18A52CA21789D73003F8C13 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		F18A52CC2178AA11003F8C13 /* CarouselItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
+		F18A52CD2178AA11003F8C13 /* CarouselKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselKind.swift; sourceTree = "<group>"; };
+		F18A52D02178B73B003F8C13 /* Carousel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,10 @@
 		F18A52C921789D65003F8C13 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F18A52CC2178AA11003F8C13 /* CarouselItem.swift */,
+				F18A52CD2178AA11003F8C13 /* CarouselKind.swift */,
 				F18A52CA21789D73003F8C13 /* Carousel.swift */,
+				F18A52D02178B73B003F8C13 /* Carousel+Extension.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -147,7 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F18A52CB21789D73003F8C13 /* Carousel.swift in Sources */,
+				F18A52D12178B73B003F8C13 /* Carousel+Extension.swift in Sources */,
 				F18A52BA21789887003F8C13 /* ViewController.swift in Sources */,
+				F18A52CF2178AA11003F8C13 /* CarouselKind.swift in Sources */,
+				F18A52CE2178AA11003F8C13 /* CarouselItem.swift in Sources */,
 				F18A52B821789887003F8C13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

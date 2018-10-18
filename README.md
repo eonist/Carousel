@@ -15,6 +15,11 @@ Carousel is a small framework that enables you to gesture between views.
 ```swift
 //Figure out the 1,2,3 slots ✅  
 	//slots are rearanged at release of touch, and at   onScroll ✅  
+	//make the reArrange(x:CGFloat) method 👈 👈 👈
+		//its job is to keep track of idx, call apeared, and disapeared, and set carouselState on items
+		//send (anim.fractionComplete * width) when you stop midway in animation
+		//when panning send: curXOffset = curXOffset + pan.offset
+		//try to get the correct indecies etc. 
 //how do we fill them with cards ✅  
 //what happens when there is only one or two cards or five. 🚫  
 //  
