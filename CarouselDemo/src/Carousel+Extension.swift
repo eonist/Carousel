@@ -1,5 +1,7 @@
 import UIKit
-
+/**
+ * Create
+ */
 extension Carousel{
    /**
     *
@@ -20,8 +22,32 @@ extension Carousel{
       addSubview(view)
       return view
    }
-
+   /**
+    *
+    */
+   func createFirst(idx:Int) -> Card{
+      let card = createCard(idx: idx)
+      card.frame.origin.x = 0
+      return card
+   }
+   /**
+    *
+    */
+   func createSecond(idx:Int) -> Card{
+      let card = createCard(idx: idx)
+      card.frame.origin.x = UIScreen.main.bounds.width
+      return card
+   }
+   /**
+    *
+    */
+   func createCard(idx:Int) -> Card{
+      return Card.init(color: self.items[idx], frame: UIScreen.main.bounds)
+   }
 }
+/**
+ * Add gestures
+ */
 extension Carousel{
    /**
     * Adds gesture recognizers
@@ -36,6 +62,9 @@ extension Carousel{
       self.addGestureRecognizer(pan)
    }
 }
+/**
+ * Handle gestures
+ */
 extension Carousel{
    /**
     * Normal tap
@@ -52,11 +81,15 @@ extension Carousel{
     */
    @objc func onPan(recognizer:UIPanGestureRecognizer) {
       let translation = recognizer.translation(in: self)
-      Swift.print("translation:  \(translation)")
+//      Swift.print("translation:  \(translation)")
 //      guard let posConstraint = curView.anchor else {fatalError("err posConstraint not available")}
 //      let x = posConstraint.x.constant + translation.x
 //      curView.update(offset: x, align: .left, alignTo: .left)
-      redBox.frame.origin.x = redBox.frame.origin.x + translation.x
+      curX += translation.x
+      redBox.frame.origin.x = curX
+      reArrange(x: curX)
+//      Swift.print("curX:  \(curX)")
+      
       /**/
       recognizer.setTranslation(.zero, in: self)/*reset recognizer*/
       if [.ended,.cancelled,.failed].contains(recognizer.state)   {
@@ -85,6 +118,50 @@ extension Carousel{
       //self.layoutIfNeeded()/*visual update*/
    }
 }
+
+/**
+ * ReArranger
+ */
+extension Carousel{
+   //slots are rearanged at release of touch, and at   onScroll, no only at onScroll ✅
+   //make the reArrange(x:CGFloat) method 👈 👈 👈
+      //its job is to keep track of idx, call apeared, and disapeared, and set carouselState on items
+      //send (anim.fractionComplete * width) when you stop midway in animation, aka onTap
+      //when panning send: curXOffset = curXOffset + pan.offset
+      //try to get the correct indecies etc.
+   /**
+    * PARAM x: the current offset of the virtualBox
+    */
+   func reArrange(x:CGFloat){
+//      Swift.print("curX:  \(curX)")
+      let normalizedX:CGFloat = x.truncatingRemainder(dividingBy: UIScreen.main.bounds.width)
+      Swift.print("normalizedX:  \(normalizedX)")
+      let fraction:CGFloat = -(curX/UIScreen.main.bounds.width)
+//      Swift.print("fraction:  \(fraction)")
+//      Swift.print("ceil(fraction):  \(ceil(fraction))")
+//      Swift.print("floor(fraction):  \(floor(fraction))")
+      let idx:Int = Int(ceil(fraction))
+//      Swift.print("idx:  \(idx)")
+      if self.idx != idx {
+         Swift.print("idx has shifted to: \(idx), rearrange cards")
+         if idx > self.idx {//idx moved forward (slides moved right to left)
+            Swift.print("idx moved forward")
+            //take firstCard and call disapear
+            //take secondcard and set it to firstCard
+            //take prevFirstCard and set it to secondCard
+            //call appear on secondCard
+         }else{//idx moved backward (slides moved left to right)
+            Swift.print("idx moved backward")
+         }
+         self.idx = idx
+      }
+      
+      //🏀
+      //set secondCard.x to if negative width - normalizedX if positive normalizedX
+      //set firstCard.x to the left of the secondCard
+   }
+}
+
 //      if redBox.x > threshold {
 //         //shuffle cards around, move leftcard to right card
 //         animateRight()
