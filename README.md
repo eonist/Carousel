@@ -3,7 +3,7 @@ Carousel is a small framework that enables you to gesture between views.
 
 ### Features
 - Infinite loop
-- Re-uses Views (only 3 views are made)
+- Re-uses Views (only 2 views are made)
 - appeared and disappeared can be overridden
 - Uses standard UIViewPropertyAnimator
 - Uses AutoLayout to position views
@@ -19,7 +19,7 @@ Carousel is a small framework that enables you to gesture between views.
 		//its job is to keep track of idx, call apeared, and disapeared, and set carouselState on items
 		//send (anim.fractionComplete * width) when you stop midway in animation, aka onTap
 		//when panning send: curXOffset = curXOffset + pan.offset
-		//try to get the correct indecies etc. 
+		//try to get the correct indecies etc.
 //how do we fill them with cards ✅  
 //what happens when there is only one or two cards or five. 🚫  
 //  

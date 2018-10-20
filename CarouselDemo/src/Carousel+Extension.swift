@@ -11,7 +11,7 @@ extension Carousel{
       view.backgroundColor = .gray
       addSubview(view)
       return view
-      
+
    }
    /**
     *
@@ -42,7 +42,9 @@ extension Carousel{
     *
     */
    func createCard(idx:Int) -> Card{
-      return Card.init(color: self.items[idx], frame: UIScreen.main.bounds)
+      let card = Card.init(color: self.items[idx], frame: UIScreen.main.bounds)
+      self.addSubview(card)
+      return card
    }
 }
 /**
@@ -89,7 +91,7 @@ extension Carousel{
       redBox.frame.origin.x = curX
       reArrange(x: curX)
 //      Swift.print("curX:  \(curX)")
-      
+
       /**/
       recognizer.setTranslation(.zero, in: self)/*reset recognizer*/
       if [.ended,.cancelled,.failed].contains(recognizer.state)   {
@@ -123,7 +125,7 @@ extension Carousel{
  * ReArranger
  */
 extension Carousel{
-   //slots are rearanged at release of touch, and at   onScroll, no only at onScroll ✅
+   //slots are rearanged at release of touch, and at onScroll, no only at onScroll ✅
    //make the reArrange(x:CGFloat) method 👈 👈 👈
       //its job is to keep track of idx, call apeared, and disapeared, and set carouselState on items
       //send (anim.fractionComplete * width) when you stop midway in animation, aka onTap
@@ -135,30 +137,45 @@ extension Carousel{
    func reArrange(x:CGFloat){
 //      Swift.print("curX:  \(curX)")
       let normalizedX:CGFloat = x.truncatingRemainder(dividingBy: UIScreen.main.bounds.width)
-      Swift.print("normalizedX:  \(normalizedX)")
+//      Swift.print("normalizedX:  \(normalizedX)")
       let fraction:CGFloat = -(curX/UIScreen.main.bounds.width)
 //      Swift.print("fraction:  \(fraction)")
 //      Swift.print("ceil(fraction):  \(ceil(fraction))")
 //      Swift.print("floor(fraction):  \(floor(fraction))")
-      let idx:Int = Int(ceil(fraction))
+      let idx:Int = Int(floor(fraction))
 //      Swift.print("idx:  \(idx)")
       if self.idx != idx {
          Swift.print("idx has shifted to: \(idx), rearrange cards")
          if idx > self.idx {//idx moved forward (slides moved right to left)
             Swift.print("idx moved forward")
             //take firstCard and call disapear
+//            firstCard.disappeared()
+            secondCard.appeared()
             //take secondcard and set it to firstCard
-            //take prevFirstCard and set it to secondCard
+            Swift.swap(&firstCard, &secondCard)
             //call appear on secondCard
+
          }else{//idx moved backward (slides moved left to right)
             Swift.print("idx moved backward")
+            firstCard.appeared()
+            //take secondcard and set it to firstCard
+            Swift.swap(&firstCard, &secondCard)
+            //call disappeared on secondCard
+//            secondCard.disappeared()
          }
          self.idx = idx
       }
-      
-      //🏀
-      //set secondCard.x to if negative width - normalizedX if positive normalizedX
-      //set firstCard.x to the left of the secondCard
+      //🏀 figure out what happens
+         //prob just floor and it works ✅
+         //use the curXPos to skip moving forward / backward if it isn't nessasary. if your already on the correct idx etc 🚫
+         //when you move backwards the first time, the idx doesnt change 🚫
+         //you can probably solve all this by untroducing curIdx:Int? = nil and having initIdx 🚫
+         //idx should always reflect the idx of the firstCard 🚫
+
+      //set secondCard.x to (if negative width - normalizedX if positive normalizedX)
+      firstCard.frame.origin.x = normalizedX <= 0 ? normalizedX : -UIScreen.main.bounds.width + normalizedX
+      //set firstCard.x to (the left of the secondCard)
+      secondCard.frame.origin.x = firstCard.frame.origin.x + UIScreen.main.bounds.width
    }
 }
 

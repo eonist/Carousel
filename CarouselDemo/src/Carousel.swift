@@ -27,8 +27,11 @@ class Carousel:UIView{
    
    override init(frame:CGRect){
 		super.init(frame:frame)
+      _ = firstCard
+      _ = secondCard
 		_ = grayBox
 		_ = redBox
+      
       backgroundColor = .purple
 		addGestureHandler()
 	}
