@@ -30,7 +30,39 @@ Carousel is a small framework that enables you to gesture between views.
 
 //Figure out detect axis 👈 🚫  
 	//use trig from press to drag.dist >= 64 to activate, actually drag.dist.x > 54 or .y > 54  
-//Add loops feature later  
+//Add loops feature later
+
+
+//figure out what happens
+         //prob just floor and it works ✅
+         //use the curXPos to skip moving forward / backward if it isn't nessasary. if your already on the correct idx etc 🚫
+         //when you move backwards the first time, the idx doesnt change 🚫
+         //you can probably solve all this by untroducing curIdx:Int? = nil and having initIdx 🚫
+         //idx should always reflect the idx of the firstCard 🚫
+
+
+		//Make github repo, add pseudo code ✅
+		//Disable the code that isn't needed for testing gestures ✅
+		   //make Carousel+Extension.swift ✅
+		//look at the legacy code, and how you position left right idle etc. ✅
+		//create 4 views. with the 4 debug colors ✅
+
+		//get the rgb vals for the cool colors
+		//make the createCards methods ✅
+		//when idx switches, ✅
+		   //then on the basis of which dir the idx switch is going then call, apear, disapar on items ✅
+
+//add Spatial to Carousel 🏀
+   //make appear and disapear work 👈
+   //set idx to cards in rearrange
+   //make Carousel overridable
+   //add carousell to WeatherCardsApp
+   //use terminology from tableview or your own table view when setting data, reuse etc
+   //test animating the cards
+   //test stopping animatiopn mid way etc
+   //test programtically sliding cards. setCardIdx etc
+   //make gif of WeatherCardsApp
+   //Finish spatial, carousel, chaplin then work on HCCQR and beam  👌
 ```
 
 

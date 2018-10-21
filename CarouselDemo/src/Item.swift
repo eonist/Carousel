@@ -1,10 +1,16 @@
 import UIKit
 
-class CarouselItem:UIView,CarouselKind{
-	var state:CarouselState = .inActive
-   override init(frame:CGRect){
+class Item:UIView,ItemKind{
+//   var state:ItemState = .inActive
+   var idx:Int
+   init(idx:Int,frame:CGRect){
+      self.idx = idx
 		super.init(frame:frame)
+      isUserInteractionEnabled = true
 	}
+   /**
+    * Boilerplate
+    */
    required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }

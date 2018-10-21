@@ -1,11 +1,11 @@
 import UIKit
 
-class Card:CarouselItem{
+class Card:Item{
    var color:UIColor
    
-   init(color:UIColor, frame: CGRect) {
+   init(color:UIColor, idx:Int, frame: CGRect) {
       self.color = color
-      super.init(frame: frame)
+      super.init(idx:idx, frame: frame)
       backgroundColor = self.color
    }
    override func appeared() {
@@ -18,3 +18,4 @@ class Card:CarouselItem{
       fatalError("init(coder:) has not been implemented")
    }
 }
+
