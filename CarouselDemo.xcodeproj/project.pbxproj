@@ -19,6 +19,7 @@
 		F1A3206C217C952E008B7444 /* Carousel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A3206B217C952D008B7444 /* Carousel+Animation.swift */; };
 		F1A3206E217C9580008B7444 /* Carousel+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A3206D217C9580008B7444 /* Carousel+Create.swift */; };
 		F1A32070217C95AE008B7444 /* Carousel+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */; };
+		F1A32072217E06F1008B7444 /* TimeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A32071217E06F1008B7444 /* TimeAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F1A3206B217C952D008B7444 /* Carousel+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel+Animation.swift"; sourceTree = "<group>"; };
 		F1A3206D217C9580008B7444 /* Carousel+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel+Create.swift"; sourceTree = "<group>"; };
 		F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel+Gesture.swift"; sourceTree = "<group>"; };
+		F1A32071217E06F1008B7444 /* TimeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				F18A52CD2178AA11003F8C13 /* ItemKind.swift */,
 				F18A52F0217A0C1E003F8C13 /* Card.swift */,
 				F18A52CA21789D73003F8C13 /* Carousel.swift */,
+				F1A32071217E06F1008B7444 /* TimeAnimator.swift */,
 				F1A3206D217C9580008B7444 /* Carousel+Create.swift */,
 				F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */,
 				F1A3206B217C952D008B7444 /* Carousel+Animation.swift */,
@@ -170,6 +173,7 @@
 				F1A3206E217C9580008B7444 /* Carousel+Create.swift in Sources */,
 				F18A52BA21789887003F8C13 /* ViewController.swift in Sources */,
 				F1A3206C217C952E008B7444 /* Carousel+Animation.swift in Sources */,
+				F1A32072217E06F1008B7444 /* TimeAnimator.swift in Sources */,
 				F18A52CF2178AA11003F8C13 /* ItemKind.swift in Sources */,
 				F18A52CE2178AA11003F8C13 /* Item.swift in Sources */,
 				F18A52B821789887003F8C13 /* AppDelegate.swift in Sources */,

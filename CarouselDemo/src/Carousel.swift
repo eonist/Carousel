@@ -1,9 +1,8 @@
 import UIKit
 
 //🏀
-//get onTapDown working
-//test making anim interuptable in seperate test, where u get curX after stop etc
-//test with fake anim, just move directly a few times
+//make a faux anim method that sets a value from to something  👈
+//use simpletimer to animate it 👈
 
 class Carousel:UIView{
    let items:[UIColor] = [.green,.red,.yellow,.blue]
@@ -25,6 +24,7 @@ class Carousel:UIView{
    override init(frame:CGRect){
 		super.init(frame:frame)
       isUserInteractionEnabled = true
+      
       _ = firstCard
       _ = secondCard
 //      _ = grayBox
