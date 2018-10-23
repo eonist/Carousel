@@ -6,7 +6,7 @@ class Item:UIView,ItemKind{
    init(idx:Int,frame:CGRect){
       self.idx = idx
 		super.init(frame:frame)
-      isUserInteractionEnabled = true
+//      isUserInteractionEnabled = true
 	}
    /**
     * Boilerplate

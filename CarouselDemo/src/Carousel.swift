@@ -1,8 +1,7 @@
 import UIKit
 
-//🏀
-//make a faux anim method that sets a value from to something  👈
-//use simpletimer to animate it 👈
+
+//TODO: do all the onUp,down,move, then do the idx etc. 👈
 
 class Carousel:UIView{
    let items:[UIColor] = [.green,.red,.yellow,.blue]
@@ -18,13 +17,13 @@ class Carousel:UIView{
 
    lazy var firstCard:Card = self.createFirst(idx: 0)
    lazy var secondCard:Card = self.createSecond(idx: 1)
-   
+
    var anim:UIViewPropertyAnimator?
 
    override init(frame:CGRect){
 		super.init(frame:frame)
       isUserInteractionEnabled = true
-      
+
       _ = firstCard
       _ = secondCard
 //      _ = grayBox
@@ -32,7 +31,7 @@ class Carousel:UIView{
 
       backgroundColor = .purple
 		addGestureHandler()
-      
+
 	}
    /**
     * Boilerplate
@@ -104,4 +103,3 @@ class Carousel:UIView{
 //      }
 //   }
 //}
-
