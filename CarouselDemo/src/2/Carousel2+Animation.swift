@@ -10,7 +10,7 @@ extension Carousel2{
     */
    func animateLeft(){
       Swift.print("animateLeft 👌")
-      let from = cardContainer.frame.origin.x
+      let from = containerX
       let to = CGFloat(self.idx) * -UIScreen.main.bounds.width
       animate(to: to, from: from)
    }
@@ -20,7 +20,7 @@ extension Carousel2{
     */
    func animateRight(){
       Swift.print("animateRight 👌")
-      let from = cardContainer.frame.origin.x
+      let from = containerX
       let to = CGFloat(self.idx+1) * -UIScreen.main.bounds.width
       animate(to: to, from: from)
    }
@@ -30,7 +30,7 @@ extension Carousel2{
     */
    func animateToIdle(isBeyondLeft:Bool){
       Swift.print("animateToIdle 👌")
-      let from = cardContainer.frame.origin.x
+      let from = containerX
       let to = CGFloat(self.idx + (isBeyondLeft ? 0:1)) * -UIScreen.main.bounds.width
       animate(to: to, from: from)
    }
@@ -41,7 +41,7 @@ extension Carousel2{
       let fraction = dist / UIScreen.main.bounds.width
 //      Swift.print("fraction:  \(fraction)")
       animator.duration = Double(Carousel2.defaultDur) * Double(fraction)
-      Swift.print("animator.totalCount:  \(animator.totalCount)")
+//      Swift.print("animator.totalCount:  \(animator.totalCount)")
       animator.from = from
       animator.to = to
       animator.tick = {

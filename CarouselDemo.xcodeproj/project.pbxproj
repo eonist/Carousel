@@ -12,6 +12,11 @@
 		F13409C521807BAF00D12509 /* Carousel2+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C421807BAF00D12509 /* Carousel2+Animation.swift */; };
 		F13409C721807BE700D12509 /* Carousel2+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C621807BE700D12509 /* Carousel2+Gesture.swift */; };
 		F13409C9218087D700D12509 /* CarouselAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C8218087D700D12509 /* CarouselAnimator.swift */; };
+		F13409CB2180A70700D12509 /* IntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409CA2180A70700D12509 /* IntParser.swift */; };
+		F13409D02180AAEF00D12509 /* ConstraintKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409CD2180AAEF00D12509 /* ConstraintKind.swift */; };
+		F13409D12180AAEF00D12509 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409CE2180AAEF00D12509 /* Alignment.swift */; };
+		F13409D22180AAEF00D12509 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409CF2180AAEF00D12509 /* Constraint.swift */; };
+		F13409D42180ABAF00D12509 /* CardKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409D32180ABAF00D12509 /* CardKind.swift */; };
 		F161B5AE217F324600FEEE94 /* Carousel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161B5AD217F324600FEEE94 /* Carousel2.swift */; };
 		F161B5B1217F4ED500FEEE94 /* Carousel2+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161B5B0217F4ED500FEEE94 /* Carousel2+Create.swift */; };
 		F161B5B3217F51CB00FEEE94 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161B5B2217F51CB00FEEE94 /* Card2.swift */; };
@@ -20,13 +25,6 @@
 		F18A52BD21789887003F8C13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18A52BB21789887003F8C13 /* Main.storyboard */; };
 		F18A52BF21789889003F8C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18A52BE21789889003F8C13 /* Assets.xcassets */; };
 		F18A52C221789889003F8C13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18A52C021789889003F8C13 /* LaunchScreen.storyboard */; };
-		F18A52CB21789D73003F8C13 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52CA21789D73003F8C13 /* Carousel.swift */; };
-		F18A52CE2178AA11003F8C13 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52CC2178AA11003F8C13 /* Item.swift */; };
-		F18A52CF2178AA11003F8C13 /* ItemKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52CD2178AA11003F8C13 /* ItemKind.swift */; };
-		F18A52F1217A0C1E003F8C13 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52F0217A0C1E003F8C13 /* Card.swift */; };
-		F1A3206C217C952E008B7444 /* Carousel+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A3206B217C952D008B7444 /* Carousel+Animation.swift */; };
-		F1A3206E217C9580008B7444 /* Carousel+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A3206D217C9580008B7444 /* Carousel+Create.swift */; };
-		F1A32070217C95AE008B7444 /* Carousel+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +33,11 @@
 		F13409C421807BAF00D12509 /* Carousel2+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel2+Animation.swift"; sourceTree = "<group>"; };
 		F13409C621807BE700D12509 /* Carousel2+Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel2+Gesture.swift"; sourceTree = "<group>"; };
 		F13409C8218087D700D12509 /* CarouselAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselAnimator.swift; sourceTree = "<group>"; };
+		F13409CA2180A70700D12509 /* IntParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntParser.swift; sourceTree = "<group>"; };
+		F13409CD2180AAEF00D12509 /* ConstraintKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintKind.swift; sourceTree = "<group>"; };
+		F13409CE2180AAEF00D12509 /* Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
+		F13409CF2180AAEF00D12509 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		F13409D32180ABAF00D12509 /* CardKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardKind.swift; sourceTree = "<group>"; };
 		F161B5AD217F324600FEEE94 /* Carousel2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel2.swift; sourceTree = "<group>"; };
 		F161B5B0217F4ED500FEEE94 /* Carousel2+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel2+Create.swift"; sourceTree = "<group>"; };
 		F161B5B2217F51CB00FEEE94 /* Card2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
@@ -45,13 +48,6 @@
 		F18A52BE21789889003F8C13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F18A52C121789889003F8C13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F18A52C321789889003F8C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F18A52CA21789D73003F8C13 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
-		F18A52CC2178AA11003F8C13 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		F18A52CD2178AA11003F8C13 /* ItemKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemKind.swift; sourceTree = "<group>"; };
-		F18A52F0217A0C1E003F8C13 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		F1A3206B217C952D008B7444 /* Carousel+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel+Animation.swift"; sourceTree = "<group>"; };
-		F1A3206D217C9580008B7444 /* Carousel+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel+Create.swift"; sourceTree = "<group>"; };
-		F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel+Gesture.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +65,22 @@
 			isa = PBXGroup;
 			children = (
 				F13409C121807B8900D12509 /* SimpleTimer.swift */,
+				F13409CC2180AAD800D12509 /* spatial */,
 				F13409C021807B8900D12509 /* TimeAnimator.swift */,
 				F13409C8218087D700D12509 /* CarouselAnimator.swift */,
+				F13409CA2180A70700D12509 /* IntParser.swift */,
 			);
 			path = third;
+			sourceTree = "<group>";
+		};
+		F13409CC2180AAD800D12509 /* spatial */ = {
+			isa = PBXGroup;
+			children = (
+				F13409CE2180AAEF00D12509 /* Alignment.swift */,
+				F13409CF2180AAEF00D12509 /* Constraint.swift */,
+				F13409CD2180AAEF00D12509 /* ConstraintKind.swift */,
+			);
+			path = spatial;
 			sourceTree = "<group>";
 		};
 		F161B5AF217F4EC000FEEE94 /* 2 */ = {
@@ -83,19 +91,9 @@
 				F13409C621807BE700D12509 /* Carousel2+Gesture.swift */,
 				F13409C421807BAF00D12509 /* Carousel2+Animation.swift */,
 				F161B5B2217F51CB00FEEE94 /* Card2.swift */,
+				F13409D32180ABAF00D12509 /* CardKind.swift */,
 			);
 			path = 2;
-			sourceTree = "<group>";
-		};
-		F161B5B4217F6C6700FEEE94 /* 1 */ = {
-			isa = PBXGroup;
-			children = (
-				F18A52CA21789D73003F8C13 /* Carousel.swift */,
-				F1A3206D217C9580008B7444 /* Carousel+Create.swift */,
-				F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */,
-				F1A3206B217C952D008B7444 /* Carousel+Animation.swift */,
-			);
-			path = 1;
 			sourceTree = "<group>";
 		};
 		F18A52AB21789886003F8C13 = {
@@ -132,10 +130,6 @@
 		F18A52C921789D65003F8C13 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F18A52CC2178AA11003F8C13 /* Item.swift */,
-				F18A52CD2178AA11003F8C13 /* ItemKind.swift */,
-				F18A52F0217A0C1E003F8C13 /* Card.swift */,
-				F161B5B4217F6C6700FEEE94 /* 1 */,
 				F161B5AF217F4EC000FEEE94 /* 2 */,
 			);
 			path = src;
@@ -212,23 +206,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F18A52CB21789D73003F8C13 /* Carousel.swift in Sources */,
-				F1A32070217C95AE008B7444 /* Carousel+Gesture.swift in Sources */,
-				F18A52F1217A0C1E003F8C13 /* Card.swift in Sources */,
-				F1A3206E217C9580008B7444 /* Carousel+Create.swift in Sources */,
 				F161B5AE217F324600FEEE94 /* Carousel2.swift in Sources */,
+				F13409D12180AAEF00D12509 /* Alignment.swift in Sources */,
 				F13409C321807B8900D12509 /* SimpleTimer.swift in Sources */,
 				F13409C521807BAF00D12509 /* Carousel2+Animation.swift in Sources */,
 				F18A52BA21789887003F8C13 /* ViewController.swift in Sources */,
-				F1A3206C217C952E008B7444 /* Carousel+Animation.swift in Sources */,
+				F13409D42180ABAF00D12509 /* CardKind.swift in Sources */,
+				F13409D22180AAEF00D12509 /* Constraint.swift in Sources */,
 				F13409C221807B8900D12509 /* TimeAnimator.swift in Sources */,
 				F161B5B3217F51CB00FEEE94 /* Card2.swift in Sources */,
-				F18A52CF2178AA11003F8C13 /* ItemKind.swift in Sources */,
+				F13409CB2180A70700D12509 /* IntParser.swift in Sources */,
 				F13409C9218087D700D12509 /* CarouselAnimator.swift in Sources */,
 				F13409C721807BE700D12509 /* Carousel2+Gesture.swift in Sources */,
-				F18A52CE2178AA11003F8C13 /* Item.swift in Sources */,
 				F161B5B1217F4ED500FEEE94 /* Carousel2+Create.swift in Sources */,
 				F18A52B821789887003F8C13 /* AppDelegate.swift in Sources */,
+				F13409D02180AAEF00D12509 /* ConstraintKind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

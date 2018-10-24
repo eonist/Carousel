@@ -21,7 +21,7 @@ class TimeAnimator:SimpleTimer{
    var totalCount:Int {return Int(ceil(duration / (interval)))}//rename to maxCount?, we needed to ceil, or else some cases would be zero
    var duration:TimeInterval /*in seconds*/
    var onComplete:() -> Void
-   init(duration:TimeInterval, onChange:@escaping () -> Void = {Swift.print("TimerAnimator.onChange")}, onComplete:@escaping () -> Void = {Swift.print("TimerAnimator.onComplete")}) {
+   init(duration:TimeInterval, onChange:@escaping () -> Void = {/*Swift.print("TimerAnimator.onChange")*/}, onComplete:@escaping () -> Void = {/*Swift.print("TimerAnimator.onComplete")*/}) {
       self.duration = duration
       self.onComplete = onComplete
 //      self.onChange = onChange
