@@ -66,7 +66,7 @@ extension Carousel2{
             Swift.print("idx moved forward")
             Swift.swap(&firstCard, &lastCard)
             firstCard.idx = idx
-            lastCard.idx = idx + 1
+            lastCard.idx = idx + 1//⚠️️ strictly speaking the +1 should be the diff of curIdx and idx, etc,etc, but only relevant if setIdx is implemented on the carousel
          }else{/*idx moved backward (slides moved left to right)*/
             Swift.print("idx moved backward")
             Swift.swap(&firstCard, &lastCard)
@@ -76,7 +76,8 @@ extension Carousel2{
          self.idx = idx
       }
       let normalizedX:CGFloat = x.truncatingRemainder(dividingBy: UIScreen.main.bounds.width)//⚠️️ this should probably be .remainder(devidedBy: etc
-      firstCard.frame.origin.x = normalizedX <= 0 ? normalizedX : -UIScreen.main.bounds.width + normalizedX
-      lastCard.frame.origin.x = firstCard.frame.origin.x + UIScreen.main.bounds.width
+      let firstX = normalizedX <= 0 ? normalizedX : -UIScreen.main.bounds.width + normalizedX
+      firstCard.update(offset: firstX, align: .left, alignTo: .left)
+      lastCard.update(offset: firstX + UIScreen.main.bounds.width, align: .left, alignTo: .left)
    }
 }

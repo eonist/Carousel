@@ -46,13 +46,14 @@ extension ConstraintKind where Self:UIView{
     * TODO: ⚠️️ maybe reuse the code from activateConstraint, by forwarning the closure etc. Nope, cant call closure twice
     * TODO: ⚠️️ Could be possible to do something like: typealias UIViewConstraintKind = UIView & ConstraintKind, already done ✅
     * Example:
-    * sliderBar.activateConstraintKind { view in
+    * sliderBar.setAndActivateConstraint { view in
     *      let anchor = Constraint.anchor(view, to: self, align: .topLeft, alignTo: .topLeft)
     *      let size = Constraint.size(view, size: size)
-    *      return (anchor:anchor, size:size)
+    *      return (anchor:anchor, size:size)//(anchor, size) 👈 also works
     * }
+    * NOTE: this had to be renamed to setAndActivateConstraint, as overriding the default extension method didnt work so well when you passed the variable into a method
     */
-   func activateConstraintKind(closure:ConstraintKindClosure) {
+   func setAndActivateConstraint(closure:ConstraintKindClosure) {
       self.translatesAutoresizingMaskIntoConstraints = false
       let constraints:ReturnType = closure(self)/*the constraints is returned from the closure*/
       self.size = constraints.size

@@ -1,6 +1,10 @@
 import UIKit
 
-class Card2:UIView, CardKind{
+class Card2:UIView, CardKind, ConstraintKind{
+   /*Stores the constraints, for easy activating and deactivating*/
+   var size:SizeConstraint?
+   var anchor:AnchorConstraint?
+   /**/
    var color:UIColor
    lazy var textField:UITextField = {
       let textField = UITextField.init(frame: self.frame)

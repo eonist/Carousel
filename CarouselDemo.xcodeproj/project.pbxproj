@@ -83,19 +83,6 @@
 			path = spatial;
 			sourceTree = "<group>";
 		};
-		F161B5AF217F4EC000FEEE94 /* 2 */ = {
-			isa = PBXGroup;
-			children = (
-				F161B5AD217F324600FEEE94 /* Carousel2.swift */,
-				F161B5B0217F4ED500FEEE94 /* Carousel2+Create.swift */,
-				F13409C621807BE700D12509 /* Carousel2+Gesture.swift */,
-				F13409C421807BAF00D12509 /* Carousel2+Animation.swift */,
-				F161B5B2217F51CB00FEEE94 /* Card2.swift */,
-				F13409D32180ABAF00D12509 /* CardKind.swift */,
-			);
-			path = 2;
-			sourceTree = "<group>";
-		};
 		F18A52AB21789886003F8C13 = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +117,12 @@
 		F18A52C921789D65003F8C13 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F161B5AF217F4EC000FEEE94 /* 2 */,
+				F161B5AD217F324600FEEE94 /* Carousel2.swift */,
+				F161B5B0217F4ED500FEEE94 /* Carousel2+Create.swift */,
+				F13409C621807BE700D12509 /* Carousel2+Gesture.swift */,
+				F13409C421807BAF00D12509 /* Carousel2+Animation.swift */,
+				F161B5B2217F51CB00FEEE94 /* Card2.swift */,
+				F13409D32180ABAF00D12509 /* CardKind.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
