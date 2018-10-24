@@ -1,40 +1,18 @@
 import UIKit
 
-
-//So many edge cases ruines the code. Use TimeAnimator instead of UIPropAnimator, then try apples animator class
-//Simpler: 🏀
-   //add a CardContainer✅
-      //make odd/even cards with idx to easier debug, -+10 ✅
-   //onDown 👉 stopMoving cardContainer✅
-   //onUp 👉 startMoving cardContainer✅
-      //what dir is it moving 👈👈👈
-      //what is the cur idx 👈👈👈
-      //what is the next idx
-      //animate to next idx, with the correct fraction of time
-      //moveCardContainer(x:x) 👉✅
-         //what is current idx?
-         //modulo the X, and shuffle the 2 cards acordingly ()
-         //we only move the CardContainer, not the cards directly.
-   //onMoved 👉 move cardContainer✅
-      //sort out card1 and card2
-
-//then once the code is simple we ditch the cardcontainer for a virtual X value.
-//Add TimeAnimator
-   //stop the timeAnimator on onDown
-      //start TimeAnimator with with correct dur: max_dur * dist_left_to_goal / max_dist
-      //you find the dist to goal by looking at different .x .w vals in the beyondLeft,beyondRight,idle resolver
-      //we also need to reset the TimeAnimator onDown or onUp
-      
 class Carousel2:UIView,UIGestureRecognizerDelegate{
    let items:[UIColor] = [.yellow,.blue,.green,.red]
-   
+   /*UI*/
    lazy var firstCard:Card2 = self.createFirst(idx: 0)
    lazy var lastCard:Card2 = self.createSecond(idx: 1)
-   
-   var idx:Int = 0
 	lazy var cardContainer:UIView = createCardContainer()
-   
+   /*Interim*/
    var downX:CGFloat = 0
+   var downContainerX:CGFloat = 0
+   var idx:Int = 0
+   
+   lazy var animator:CarouselAnimator = CarouselAnimator(duration:Carousel2.defaultDur)
+//   var downIdx:Int = 0
 	override init(frame:CGRect){
 		super.init(frame:frame)
       self.backgroundColor = .purple

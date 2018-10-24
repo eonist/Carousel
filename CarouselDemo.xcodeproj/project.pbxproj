@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F13409C221807B8900D12509 /* TimeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C021807B8900D12509 /* TimeAnimator.swift */; };
+		F13409C321807B8900D12509 /* SimpleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C121807B8900D12509 /* SimpleTimer.swift */; };
+		F13409C521807BAF00D12509 /* Carousel2+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C421807BAF00D12509 /* Carousel2+Animation.swift */; };
+		F13409C721807BE700D12509 /* Carousel2+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C621807BE700D12509 /* Carousel2+Gesture.swift */; };
+		F13409C9218087D700D12509 /* CarouselAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13409C8218087D700D12509 /* CarouselAnimator.swift */; };
 		F161B5AE217F324600FEEE94 /* Carousel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161B5AD217F324600FEEE94 /* Carousel2.swift */; };
-		F161B5B1217F4ED500FEEE94 /* Carousel2+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161B5B0217F4ED500FEEE94 /* Carousel2+Extension.swift */; };
+		F161B5B1217F4ED500FEEE94 /* Carousel2+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161B5B0217F4ED500FEEE94 /* Carousel2+Create.swift */; };
 		F161B5B3217F51CB00FEEE94 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161B5B2217F51CB00FEEE94 /* Card2.swift */; };
 		F18A52B821789887003F8C13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52B721789887003F8C13 /* AppDelegate.swift */; };
 		F18A52BA21789887003F8C13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A52B921789887003F8C13 /* ViewController.swift */; };
@@ -25,8 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F13409C021807B8900D12509 /* TimeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAnimator.swift; sourceTree = "<group>"; };
+		F13409C121807B8900D12509 /* SimpleTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTimer.swift; sourceTree = "<group>"; };
+		F13409C421807BAF00D12509 /* Carousel2+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel2+Animation.swift"; sourceTree = "<group>"; };
+		F13409C621807BE700D12509 /* Carousel2+Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel2+Gesture.swift"; sourceTree = "<group>"; };
+		F13409C8218087D700D12509 /* CarouselAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselAnimator.swift; sourceTree = "<group>"; };
 		F161B5AD217F324600FEEE94 /* Carousel2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel2.swift; sourceTree = "<group>"; };
-		F161B5B0217F4ED500FEEE94 /* Carousel2+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel2+Extension.swift"; sourceTree = "<group>"; };
+		F161B5B0217F4ED500FEEE94 /* Carousel2+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Carousel2+Create.swift"; sourceTree = "<group>"; };
 		F161B5B2217F51CB00FEEE94 /* Card2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
 		F18A52B421789886003F8C13 /* CarouselDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarouselDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18A52B721789887003F8C13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,14 +65,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F13409BF21807B7700D12509 /* third */ = {
+			isa = PBXGroup;
+			children = (
+				F13409C121807B8900D12509 /* SimpleTimer.swift */,
+				F13409C021807B8900D12509 /* TimeAnimator.swift */,
+				F13409C8218087D700D12509 /* CarouselAnimator.swift */,
+			);
+			path = third;
+			sourceTree = "<group>";
+		};
 		F161B5AF217F4EC000FEEE94 /* 2 */ = {
 			isa = PBXGroup;
 			children = (
 				F161B5AD217F324600FEEE94 /* Carousel2.swift */,
-				F161B5B0217F4ED500FEEE94 /* Carousel2+Extension.swift */,
+				F161B5B0217F4ED500FEEE94 /* Carousel2+Create.swift */,
+				F13409C621807BE700D12509 /* Carousel2+Gesture.swift */,
+				F13409C421807BAF00D12509 /* Carousel2+Animation.swift */,
 				F161B5B2217F51CB00FEEE94 /* Card2.swift */,
 			);
 			path = 2;
+			sourceTree = "<group>";
+		};
+		F161B5B4217F6C6700FEEE94 /* 1 */ = {
+			isa = PBXGroup;
+			children = (
+				F18A52CA21789D73003F8C13 /* Carousel.swift */,
+				F1A3206D217C9580008B7444 /* Carousel+Create.swift */,
+				F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */,
+				F1A3206B217C952D008B7444 /* Carousel+Animation.swift */,
+			);
+			path = 1;
 			sourceTree = "<group>";
 		};
 		F18A52AB21789886003F8C13 = {
@@ -84,6 +117,7 @@
 		F18A52B621789886003F8C13 /* CarouselDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F13409BF21807B7700D12509 /* third */,
 				F18A52B721789887003F8C13 /* AppDelegate.swift */,
 				F18A52B921789887003F8C13 /* ViewController.swift */,
 				F18A52C921789D65003F8C13 /* src */,
@@ -101,11 +135,8 @@
 				F18A52CC2178AA11003F8C13 /* Item.swift */,
 				F18A52CD2178AA11003F8C13 /* ItemKind.swift */,
 				F18A52F0217A0C1E003F8C13 /* Card.swift */,
-				F18A52CA21789D73003F8C13 /* Carousel.swift */,
+				F161B5B4217F6C6700FEEE94 /* 1 */,
 				F161B5AF217F4EC000FEEE94 /* 2 */,
-				F1A3206D217C9580008B7444 /* Carousel+Create.swift */,
-				F1A3206F217C95AE008B7444 /* Carousel+Gesture.swift */,
-				F1A3206B217C952D008B7444 /* Carousel+Animation.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -186,12 +217,17 @@
 				F18A52F1217A0C1E003F8C13 /* Card.swift in Sources */,
 				F1A3206E217C9580008B7444 /* Carousel+Create.swift in Sources */,
 				F161B5AE217F324600FEEE94 /* Carousel2.swift in Sources */,
+				F13409C321807B8900D12509 /* SimpleTimer.swift in Sources */,
+				F13409C521807BAF00D12509 /* Carousel2+Animation.swift in Sources */,
 				F18A52BA21789887003F8C13 /* ViewController.swift in Sources */,
 				F1A3206C217C952E008B7444 /* Carousel+Animation.swift in Sources */,
+				F13409C221807B8900D12509 /* TimeAnimator.swift in Sources */,
 				F161B5B3217F51CB00FEEE94 /* Card2.swift in Sources */,
 				F18A52CF2178AA11003F8C13 /* ItemKind.swift in Sources */,
+				F13409C9218087D700D12509 /* CarouselAnimator.swift in Sources */,
+				F13409C721807BE700D12509 /* Carousel2+Gesture.swift in Sources */,
 				F18A52CE2178AA11003F8C13 /* Item.swift in Sources */,
-				F161B5B1217F4ED500FEEE94 /* Carousel2+Extension.swift in Sources */,
+				F161B5B1217F4ED500FEEE94 /* Carousel2+Create.swift in Sources */,
 				F18A52B821789887003F8C13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
