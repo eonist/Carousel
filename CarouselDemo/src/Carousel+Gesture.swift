@@ -2,7 +2,7 @@ import UIKit
 /**
  * Gesture
  */
-extension Carousel2{
+extension Carousel{
    /**
     * onDown
     */
@@ -51,7 +51,7 @@ extension Carousel2{
 /**
  * Utility
  */
-extension Carousel2{
+extension Carousel{
    /**
     * moveContainer
     */

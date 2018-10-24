@@ -6,8 +6,8 @@ class ViewController: UIViewController {
    //    view.addSubview(carousel)
    //    return carousel
    // }()
-   lazy var carousel2:Carousel2 = {
-      let carousel = Carousel2(frame: UIScreen.main.bounds)
+   lazy var carousel2:Carousel = {
+      let carousel = Carousel(frame: UIScreen.main.bounds)
       view.addSubview(carousel)
       return carousel
    }()

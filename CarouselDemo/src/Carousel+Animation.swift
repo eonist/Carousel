@@ -3,7 +3,7 @@ import UIKit
 /**
  * Animation
  */
-extension Carousel2{
+extension Carousel{
    static let defaultDur:TimeInterval = 0.3
    /**
     * Animates cards fróm right to left
@@ -40,7 +40,7 @@ extension Carousel2{
 //      Swift.print("dist:  \(dist)")
       let fraction = dist / UIScreen.main.bounds.width
 //      Swift.print("fraction:  \(fraction)")
-      animator.duration = Double(Carousel2.defaultDur) * Double(fraction)
+      animator.duration = Double(Carousel.defaultDur) * Double(fraction)
 //      Swift.print("animator.totalCount:  \(animator.totalCount)")
       animator.from = from
       animator.to = to

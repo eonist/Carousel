@@ -1,6 +1,6 @@
 import UIKit
 
-class Card2:UIView, CardKind, ConstraintKind{
+class Card:UIView, CardKind, ConstraintKind{
    /*Stores the constraints, for easy activating and deactivating*/
    var size:SizeConstraint?
    var anchor:AnchorConstraint?
@@ -18,7 +18,7 @@ class Card2:UIView, CardKind, ConstraintKind{
    var idx: Int  {
       didSet{//after
          textField.text = "Idx: \(idx)"
-         let color:UIColor = Carousel2.items[IntParser.normalize(idx, Carousel2.items.count)]
+         let color:UIColor = Carousel.items[IntParser.normalize(idx, Carousel.items.count)]
          backgroundColor = color
       }
    }

@@ -2,8 +2,11 @@ import UIKit
 
 //get rid of container ✅
 //add the remainder code to set the correct color, see IntParser.loop for quick memory jog ✅
-//Add Spatial 👈
-//Make CarouselCard overridable , test with WeatherCard
+//Add Spatial ✅
+//add the nice design ✅
+//add easing methods from Animator 👈
+//add text elements 👈 👈
+//Make CarouselCard overridable , test with WeatherCard, use generics
 //Try to add Carousel as .framework to weatherApp
 //Add carousel to weatherApp as carthage once it works
 //Add spatial to carousel as .framework
@@ -12,11 +15,11 @@ import UIKit
 //See if it all works
 //get TravisCI to work with building carthage
 
-class Carousel2:UIView,UIGestureRecognizerDelegate{
+class Carousel:UIView,UIGestureRecognizerDelegate{//⚠️️ cardView should be T,U:CardKind where U :UIView etc
    static let items:[UIColor] = [.yellow,.blue,.green,.red]//⚠️️ TODO: make this generic instead T, make sure that works with overriding
    /*UI*/
-   lazy var firstCard:Card2 = self.createFirst(idx: 0)
-   lazy var lastCard:Card2 = self.createSecond(idx: 1)
+   lazy var firstCard:CardView = self.createFirst(idx: 0)
+   lazy var lastCard:CardView = self.createSecond(idx: 1)
 //   lazy var cardContainer:UIView = createCardContainer()
    /*Interim*/
    var containerX:CGFloat = 0/*Virtual X value of cardContainer*/
@@ -24,11 +27,11 @@ class Carousel2:UIView,UIGestureRecognizerDelegate{
    var downContainerX:CGFloat = 0
    var idx:Int = 0
    /*Animation*/
-   lazy var animator:CarouselAnimator = CarouselAnimator(duration:Carousel2.defaultDur)
+   lazy var animator:CarouselAnimator = CarouselAnimator(duration:Carousel.defaultDur)
 //   var downIdx:Int = 0
 	override init(frame:CGRect){
 		super.init(frame:frame)
-      self.backgroundColor = .purple
+      self.backgroundColor = .gray
       self.isUserInteractionEnabled = true
 //      _ = cardContainer
       _ = firstCard

@@ -1,13 +1,12 @@
 import UIKit
-
 /**
  * Create
  */
-extension Carousel2{
+extension Carousel{
    /**
     * Creates first card
     */
-   func createFirst(idx:Int) -> Card2{
+   func createFirst(idx:Int) -> CardView{
       let card = createCard(idx: idx)
 //      card.frame.origin.x = 0
       setCardConstraints(card, xOffset: 0)
@@ -16,7 +15,7 @@ extension Carousel2{
    /**
     * Creates second card
     */
-   func createSecond(idx:Int) -> Card2{
+   func createSecond(idx:Int) -> CardView{
       let card = createCard(idx: idx)
       setCardConstraints(card, xOffset: UIScreen.main.bounds.width)
 //      card.frame.origin.x = UIScreen.main.bounds.width
@@ -25,8 +24,8 @@ extension Carousel2{
    /**
     * Creates card
     */
-   private func createCard(idx:Int) -> Card2{
-      let card = Card2.init(color: Carousel2.items[idx],idx: idx, frame: UIScreen.main.bounds)
+   private func createCard(idx:Int) -> CardView{
+      let card = CardView.init(/*color: Carousel.items[idx],*/idx: idx, frame: UIScreen.main.bounds)
       self.addSubview(card)
       card.isUserInteractionEnabled = false//⚠️️ needed?
       return card
@@ -34,7 +33,7 @@ extension Carousel2{
    /**
     * Align card
     */
-   func setCardConstraints(_ card:Card2,xOffset:CGFloat){
+   func setCardConstraints(_ card:CardView,xOffset:CGFloat){
       let screenSize:CGSize = {
          let size = UIScreen.main.bounds.size
          return CGSize(width:size.width, height:size.height)
