@@ -151,7 +151,7 @@
 				F13409BF21807B7700D12509 /* third */,
 				F18A52B721789887003F8C13 /* AppDelegate.swift */,
 				F18A52B921789887003F8C13 /* ViewController.swift */,
-				F1BBDD142180B566008DBC9B /* demo */,
+				F1BBDD142180B566008DBC9B /* src */,
 				F18A52BB21789887003F8C13 /* Main.storyboard */,
 				F18A52BE21789889003F8C13 /* Assets.xcassets */,
 				F18A52C021789889003F8C13 /* LaunchScreen.storyboard */,
@@ -174,7 +174,7 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		F1BBDD142180B566008DBC9B /* demo */ = {
+		F1BBDD142180B566008DBC9B /* src */ = {
 			isa = PBXGroup;
 			children = (
 				F1BBDD272181DD05008DBC9B /* CardCarousel.swift */,
@@ -183,7 +183,7 @@
 				F1BBDD162180B582008DBC9B /* content */,
 				F1BBDD252180E98C008DBC9B /* Const.swift */,
 			);
-			path = demo;
+			path = src;
 			sourceTree = "<group>";
 		};
 		F1BBDD162180B582008DBC9B /* content */ = {
