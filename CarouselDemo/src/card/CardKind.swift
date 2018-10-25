@@ -1,7 +1,7 @@
 
 import Foundation
 
-protocol CardKind{
+protocol CardKind:ConstraintKind{
    var idx:Int {get set}
 }
 //enum ItemState{

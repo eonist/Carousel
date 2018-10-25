@@ -36,7 +36,7 @@ extension CardView{
       self.addSubview(topBar)
       topBar.activateConstraint { view in
          let anchor = Constraint.anchor(view, to: self, align: .topLeft, alignTo: .topLeft, offset:CGPoint(x:CardView.margin.left,y:CardView.margin.top))
-         let size = Constraint.size(view, size: CGSize.init(width: UIScreen.main.bounds.width, height: TopBar.topBarHeight))
+         let size = Constraint.size(view, size: CGSize.init(width: UIScreen.main.bounds.width-CardView.margin.left-CardView.margin.left, height: TopBar.topBarHeight))
          return [anchor.x,anchor.y,size.w,size.h]
       }
       return topBar
@@ -64,7 +64,7 @@ extension CardView{
       self.addSubview(bottomBar)
       bottomBar.activateConstraint { view in
          let anchor = Constraint.anchor(view, to: cardContent, align: .topLeft, alignTo: .bottomLeft, offset:.zero)
-         let size = Constraint.size(view, size: CGSize.init(width: UIScreen.main.bounds.width, height: BottomBar.bottomBarHeight))
+         let size = Constraint.size(view, size: CGSize.init(width: UIScreen.main.bounds.width-CardView.margin.left-CardView.margin.left, height: BottomBar.bottomBarHeight))
          return [anchor.x,anchor.y,size.w,size.h]
       }
       return bottomBar

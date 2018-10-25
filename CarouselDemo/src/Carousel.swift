@@ -4,9 +4,11 @@ import UIKit
 //add the remainder code to set the correct color, see IntParser.loop for quick memory jog ✅
 //Add Spatial ✅
 //add the nice design ✅
-//add easing methods from Animator 👈
-//add text elements 👈 👈
-//Make CarouselCard overridable , test with WeatherCard, use generics
+//add easing methods from Animator 👈👈
+//add text elements ✅
+//add image elements ✅
+//add days ✅
+//Make CarouselCard overridable, use generics
 //Try to add Carousel as .framework to weatherApp
 //Add carousel to weatherApp as carthage once it works
 //Add spatial to carousel as .framework
@@ -15,11 +17,11 @@ import UIKit
 //See if it all works
 //get TravisCI to work with building carthage
 
-class Carousel:UIView,UIGestureRecognizerDelegate{//⚠️️ cardView should be T,U:CardKind where U :UIView etc
-   static let items:[UIColor] = [.yellow,.blue,.green,.red]//⚠️️ TODO: make this generic instead T, make sure that works with overriding
+class Carousel<T:UIView,U>:UIView,UIGestureRecognizerDelegate where T:CardKind{//⚠️️ cardView should be T,U:CardKind where U :UIView etc
+   var items:[U] = []//⚠️️ TODO: make this generic instead T, make sure that works with overriding
    /*UI*/
-   lazy var firstCard:CardView = self.createFirst(idx: 0)
-   lazy var lastCard:CardView = self.createSecond(idx: 1)
+   lazy var firstCard:T = self.createFirst(idx: 0)
+   lazy var lastCard:T = self.createSecond(idx: 1)
 //   lazy var cardContainer:UIView = createCardContainer()
    /*Interim*/
    var containerX:CGFloat = 0/*Virtual X value of cardContainer*/
@@ -27,7 +29,7 @@ class Carousel:UIView,UIGestureRecognizerDelegate{//⚠️️ cardView should be
    var downContainerX:CGFloat = 0
    var idx:Int = 0
    /*Animation*/
-   lazy var animator:CarouselAnimator = CarouselAnimator(duration:Carousel.defaultDur)
+   lazy var animator:CarouselAnimator = CarouselAnimator(duration:0.3)
 //   var downIdx:Int = 0
 	override init(frame:CGRect){
 		super.init(frame:frame)
@@ -70,6 +72,25 @@ class Carousel:UIView,UIGestureRecognizerDelegate{//⚠️️ cardView should be
       }
       super.touchesMoved(touches, with: event)
    }
+   /**
+    * Creates first card
+    */
+   func createFirst(idx:Int) -> T{
+      fatalError("must be overriden in subclass")
+   }
+   /**
+    * Creates second card
+    */
+   func createSecond(idx:Int) -> T{
+      fatalError("must be overriden in subclass")
+   }
+   /**
+    * Creates card
+    */
+   func createCard(idx:Int) -> T{
+      fatalError("must be overriden in subclass")
+   }
+   
 }
 //class DebugCard:UIView{
 //   var color:UIColor

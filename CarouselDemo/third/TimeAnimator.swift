@@ -1,4 +1,3 @@
-
 import UIKit
 /**
  * let animator = TimeAnimator(duration:0.3,onChange:{/*animate stuff*/},onComplete:{/*anim completed*/})

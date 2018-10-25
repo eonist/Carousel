@@ -4,7 +4,7 @@ import UIKit
  * Animation
  */
 extension Carousel{
-   static let defaultDur:TimeInterval = 0.3
+   
    /**
     * Animates cards fróm right to left
     */
@@ -40,13 +40,18 @@ extension Carousel{
 //      Swift.print("dist:  \(dist)")
       let fraction = dist / UIScreen.main.bounds.width
 //      Swift.print("fraction:  \(fraction)")
-      animator.duration = Double(Carousel.defaultDur) * Double(fraction)
+      let defaultDur:TimeInterval = 0.3
+      animator.duration = Double(defaultDur) * Double(fraction)
 //      Swift.print("animator.totalCount:  \(animator.totalCount)")
       animator.from = from
       animator.to = to
       animator.tick = {
          let x = TimeAnimator.Interpolate(from: self.animator.from, to: self.animator.to, fraction: self.animator.progress)
          self.moveContainer(x: x)
+      }
+      animator.onComplete = {//quick hack so that the click withouth movment works. , should be solved elsewhere 
+         self.animator.from = 0
+         self.animator.to = 0
       }
       animator.start()
    }

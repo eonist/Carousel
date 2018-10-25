@@ -1,13 +1,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-   // lazy var carousel:Carousel = {
-   //    let carousel = Carousel(frame: UIScreen.main.bounds)
-   //    view.addSubview(carousel)
-   //    return carousel
-   // }()
-   lazy var carousel2:Carousel = {
-      let carousel = Carousel(frame: UIScreen.main.bounds)
+   lazy var carousel:CardCarousel = {
+      let carousel = CardCarousel(frame: UIScreen.main.bounds)
       view.addSubview(carousel)
       return carousel
    }()
@@ -15,7 +10,7 @@ class ViewController: UIViewController {
       super.viewDidLoad()
       view.backgroundColor = .gray
 //      self.view.isUserInteractionEnabled = true
-      _ = carousel2
+      _ = carousel
    }
    override var prefersStatusBarHidden:Bool {return true}/*hides statusbar*/
 }

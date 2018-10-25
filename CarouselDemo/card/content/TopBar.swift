@@ -3,9 +3,12 @@ import UIKit
 
 class TopBar:UIView{
 //   lazy var buttons:[UIButton] = createButtons()
+   lazy var headerTitle = createHeaderTitle()
+   
    override init(frame: CGRect) {
       super.init(frame: frame)
       self.backgroundColor = .orange
+      _ = headerTitle
       //_ = buttons
       //applyButtonConstraints()
    }

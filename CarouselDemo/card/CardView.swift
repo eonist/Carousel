@@ -1,30 +1,31 @@
 import UIKit
 
-class CardView:UIView, CardKind, ConstraintKind{
+class CardView:Card{
+   static let items:[UIColor] = [.yellow,.blue,.green,.red]
    /*Stores the constraints, for easy activating and deactivating*/
-   var size:SizeConstraint?
-   var anchor:AnchorConstraint?
+//   var size:SizeConstraint?
+//   var anchor:AnchorConstraint?
    /*UI*/
    lazy var backgroundLayer:CALayer = createBackgroundLayer()
    lazy var maskLayer:CAShapeLayer = createMaskLayer()
    lazy var topBar:TopBar = createTopBar()
    lazy var cardContent:MiddleContent = createMiddleContent()
    lazy var bottomBar:BottomBar = createBottomBar()
-   var idx: Int  {
+   override var idx: Int  {
       didSet{//after
 //         textField.text = "Idx: \(idx)"
-         let color:UIColor = Carousel.items[IntParser.normalize(idx, Carousel.items.count)]
+         let color:UIColor = CardView.items[IntParser.normalize(idx, CardView.items.count)]
          cardContent.backgroundColor = color
       }
    }
-   init(idx:Int, frame:CGRect) {
-      self.idx = idx
-      super.init(frame: frame)
+   init(color:UIColor, idx:Int, frame:CGRect) {
+//      self.idx = idx
+      super.init(idx:idx, frame: frame)
       _ = backgroundLayer
       _ = maskLayer
       _ = topBar
       _ = cardContent
-      let color:UIColor = Carousel.items[IntParser.normalize(idx, Carousel.items.count)]
+      let color:UIColor = CardView.items[IntParser.normalize(idx, CardView.items.count)]
       cardContent.backgroundColor = color
       _ = bottomBar
 //      _ = textField
