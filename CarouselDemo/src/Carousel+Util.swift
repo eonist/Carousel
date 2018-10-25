@@ -25,23 +25,19 @@ extension Carousel{
    /**
     * moveContainer
     */
-   func moveContainer(x:CGFloat){
+   func moveCards(x:CGFloat){
       containerX = x//newX
       let fraction:CGFloat = -(x/UIScreen.main.bounds.width)
       let idx:Int = Int(floor(fraction))
       //Swift.print("idx:  \(idx)")
       if self.idx != idx {
-         Swift.print("idx has shifted to: \(idx), rearrange cards")
+//         Swift.print("idx has shifted to: \(idx), rearrange cards")
          if idx > self.idx {/*idx moved forward (slides moved right to left)*/
-            Swift.print("idx moved forward")
-            Swift.swap(&firstCard, &lastCard)
-            firstCard.idx = idx
-            lastCard.idx = idx + 1//⚠️️ strictly speaking the +1 should be the diff of curIdx and idx, etc,etc, but only relevant if setIdx is implemented on the carousel
+//            Swift.print("idx moved forward")
+            swapCards(idx)
          }else{/*idx moved backward (slides moved left to right)*/
-            Swift.print("idx moved backward")
-            Swift.swap(&firstCard, &lastCard)
-            firstCard.idx = idx
-            lastCard.idx = idx + 1
+//            Swift.print("idx moved backward")
+            swapCards(idx)
          }
          self.idx = idx
       }

@@ -8,21 +8,21 @@ import UIKit
 //add text elements ✅
 //add image elements ✅
 //add days ✅
-//Make CarouselCard overridable, use generics
+//Make CarouselCard overridable, use generics ✅
+//make things public and open in Spatial 👈
+//Add spatial to carousel as .framework 👈
+//add spatial to carousel as carthage 👈
 //Try to add Carousel as .framework to weatherApp
 //Add carousel to weatherApp as carthage once it works
-//Add spatial to carousel as .framework
-//add spatial to carousel as carthage
 //add spatial to weatherapp as carthage
 //See if it all works
 //get TravisCI to work with building carthage
 
-class Carousel<T:UIView,U>:UIView,UIGestureRecognizerDelegate where T:CardKind{//⚠️️ cardView should be T,U:CardKind where U :UIView etc
+class Carousel<T:UIView,U>:UIView where T:CardKind{//⚠️️ cardView should be T,U:CardKind where U :UIView etc
    var items:[U] = []//⚠️️ TODO: make this generic instead T, make sure that works with overriding
    /*UI*/
    lazy var firstCard:T = self.createFirst(idx: 0)
    lazy var lastCard:T = self.createSecond(idx: 1)
-//   lazy var cardContainer:UIView = createCardContainer()
    /*Interim*/
    var containerX:CGFloat = 0/*Virtual X value of cardContainer*/
    var downX:CGFloat = 0
@@ -30,15 +30,12 @@ class Carousel<T:UIView,U>:UIView,UIGestureRecognizerDelegate where T:CardKind{/
    var idx:Int = 0
    /*Animation*/
    lazy var animator:CarouselAnimator = CarouselAnimator(duration:0.3)
-//   var downIdx:Int = 0
 	override init(frame:CGRect){
 		super.init(frame:frame)
       self.backgroundColor = .gray
       self.isUserInteractionEnabled = true
-//      _ = cardContainer
       _ = firstCard
       _ = lastCard
-//      addGestures()
 	}
    required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
@@ -90,42 +87,13 @@ class Carousel<T:UIView,U>:UIView,UIGestureRecognizerDelegate where T:CardKind{/
    func createCard(idx:Int) -> T{
       fatalError("must be overriden in subclass")
    }
-   
+   /**
+    * Called by moveCards
+    * NOTE: Override this to set custom data to the cards
+    */
+   func swapCards(_ idx:Int){
+      Swift.swap(&firstCard, &lastCard)
+      firstCard.idx = idx
+      lastCard.idx = idx + 1//⚠️️ strictly speaking the +1 should be the diff of curIdx and idx, etc,etc, but only relevant if setIdx is implemented on the carousel
+   }
 }
-//class DebugCard:UIView{
-//   var color:UIColor
-//   var idx:Int
-//   lazy var textField:UITextField = {
-//      let textField = UITextField.init(frame: self.frame)
-//      textField.text = "Idx: \(idx)"
-//      addSubview(textField)
-//      textField.textColor = .black
-//      textField.textAlignment = .center
-//      textField.font = .boldSystemFont(ofSize: 16)
-//      textField.isUserInteractionEnabled = false
-//      return textField
-//   }()
-//   init(color:UIColor, idx:Int, frame: CGRect) {
-//      self.color = color
-//      self.idx = idx
-//      super.init(frame: frame)
-//      backgroundColor = self.color
-//      _ = textField
-//   }
-//   required init?(coder aDecoder: NSCoder) {
-//      fatalError("init(coder:) has not been implemented")
-//   }
-//   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//      super.touchesBegan(touches, with:event)
-//      next?.touchesBegan(touches, with: event)
-//   }
-//   /**
-//    * On tap up inside
-//    */
-//   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//      if let touch = touches.first, touch.view == self{
-//         Swift.print("Touch ended")
-//      }
-//      super.touchesEnded(touches, with:event)
-//   }
-//}

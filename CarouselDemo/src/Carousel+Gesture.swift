@@ -47,7 +47,7 @@ extension Carousel{
       let newX = containerX + (point.x - self.downX)
       self.downX = point.x//we reset downX, so we dont have to store cardContainer.x as well
       //Swift.print("newX:  \(newX)")
-      moveContainer(x: newX)
+      moveCards(x: newX)
    }
 }
 

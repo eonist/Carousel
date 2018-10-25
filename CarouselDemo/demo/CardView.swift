@@ -25,7 +25,7 @@ class CardView:Card{
       _ = maskLayer
       _ = topBar
       _ = cardContent
-      let color:UIColor = CardView.items[IntParser.normalize(idx, CardView.items.count)]
+//      let color:UIColor = CardView.items[IntParser.normalize(idx, CardView.items.count)]
       cardContent.backgroundColor = color
       _ = bottomBar
 //      _ = textField

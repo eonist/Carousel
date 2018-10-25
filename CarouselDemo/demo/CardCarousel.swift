@@ -35,4 +35,9 @@ class CardCarousel:Carousel<CardView,UIColor>{
       card.isUserInteractionEnabled = false//⚠️️ needed?
       return card
    }
+   override func swapCards(_ idx: Int) {
+      super.swapCards(idx)
+//      firstCard.setData(color,city)
+//      secondCard.setData(color,city)
+   }
 }
