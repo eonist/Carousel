@@ -1,4 +1,5 @@
 import UIKit
+import Carousel
 
 class CardCarousel:Carousel<CardView,UIColor>{
    override var items: [UIColor] {

@@ -1,4 +1,6 @@
 import UIKit
+//import Carousel//should import Spatial
+import Spatial
 
 extension MiddleContent{
    /**
@@ -19,7 +21,6 @@ extension MiddleContent{
          return [anchor.x,anchor.y,size.w,size.h]
       }
       return degLabel
-      
    }
    /**
     * kindLabel

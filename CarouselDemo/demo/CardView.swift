@@ -1,4 +1,5 @@
 import UIKit
+import Carousel
 
 class CardView:Card{
    static let items:[UIColor] = [.yellow,.blue,.green,.red]
