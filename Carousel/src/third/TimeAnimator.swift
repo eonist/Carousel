@@ -14,13 +14,13 @@ import UIKit
  * }
  * animator.start()
  */
-class TimeAnimator:SimpleTimer{
+public class TimeAnimator:SimpleTimer{
    static let fps:TimeInterval = 1/60/*1/30 is 30FPS 1/60 IS 60FPS*/
    var curCount:Int = 0
    var totalCount:Int {return Int(ceil(duration / (interval)))}//rename to maxCount?, we needed to ceil, or else some cases would be zero
-   var duration:TimeInterval /*in seconds*/
+   public var duration:TimeInterval /*in seconds*/
    var onComplete:() -> Void
-   init(duration:TimeInterval, onChange:@escaping () -> Void = {/*Swift.print("TimerAnimator.onChange")*/}, onComplete:@escaping () -> Void = {/*Swift.print("TimerAnimator.onComplete")*/}) {
+   public init(duration:TimeInterval, onChange:@escaping () -> Void = {/*Swift.print("TimerAnimator.onChange")*/}, onComplete:@escaping () -> Void = {/*Swift.print("TimerAnimator.onComplete")*/}) {
       self.duration = duration
       self.onComplete = onComplete
 //      self.onChange = onChange
@@ -37,7 +37,7 @@ class TimeAnimator:SimpleTimer{
          curCount += 1
       }
    }
-   override func reset() {
+   override public func reset() {
       stop()
       curCount = 0
    }

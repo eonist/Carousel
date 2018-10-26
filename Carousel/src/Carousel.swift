@@ -12,11 +12,13 @@ import UIKit
 //make things public and open in Spatial ✅
 //Add spatial to carousel as .framework ✅
 //add spatial to carousel as carthage ✅
-//Try to add Carousel as .framework to weatherApp
+//Try to add Carousel as .framework to weatherApp 👈
 //Add carousel to weatherApp as carthage once it works
 //add spatial to weatherapp as carthage
 //See if it all works
-//get TravisCI to work with building carthage
+//Make the project nice
+//Maybe add HOurly forcast on swipe up? 👌 
+//get TravisCI to work with building carthage via demo project first
 
 open class Carousel<T:UIView,U>:UIView where T:CardKind{//⚠️️ cardView should be T,U:CardKind where U :UIView etc
    open var items:[U] = []//⚠️️ TODO: make this generic instead T, make sure that works with overriding

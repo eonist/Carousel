@@ -1,6 +1,6 @@
 import UIKit
 
-class CarouselAnimator:TimeAnimator{
-   var from:CGFloat = 0
-   var to:CGFloat = 0
+public class CarouselAnimator:TimeAnimator{
+   public var from:CGFloat = 0
+   public var to:CGFloat = 0
 }
