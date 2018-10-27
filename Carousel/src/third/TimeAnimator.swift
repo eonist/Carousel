@@ -42,17 +42,20 @@ public class TimeAnimator:SimpleTimer{
       curCount = 0
    }
 }
+/**
+ * Utilities
+ */
 extension TimeAnimator {
    /**
     * Returns (0 to 1)
     */
-   var progress:CGFloat {
+   public var progress:CGFloat {
       return CGFloat(curCount) / CGFloat(totalCount)
    }
    /**
     * Util method for interpolating between values
     */
-   static func Interpolate(from:CGFloat, to:CGFloat, fraction:CGFloat) -> CGFloat{
+   public static func Interpolate(from:CGFloat, to:CGFloat, fraction:CGFloat) -> CGFloat{
       return fraction * (to - from) + from
    }
 }
