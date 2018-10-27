@@ -12,7 +12,7 @@ extension Carousel{
          let size = UIScreen.main.bounds.size
          return CGSize(width:size.width, height:size.height)
       }()
-      card.setAndActivateConstraint{ view in
+      card.applyConstraint{ view in
          let size:SizeConstraint = Constraint.size(card, size: screenSize)
          let anchor:AnchorConstraint = Constraint.anchor(card, to: self, align: .topLeft, alignTo: .topLeft, offset:CGPoint(x:xOffset,y:0))
          return (anchor:anchor, size:size)
