@@ -16,10 +16,10 @@ import UIKit
  */
 public class TimeAnimator:SimpleTimer{
    static let fps:TimeInterval = 1/60/*1/30 is 30FPS 1/60 IS 60FPS*/
-   var curCount:Int = 0
-   var totalCount:Int {return Int(ceil(duration / (interval)))}//rename to maxCount?, we needed to ceil, or else some cases would be zero
+   private var curCount:Int = 0
+   private var totalCount:Int {return Int(ceil(duration / (interval)))}//rename to maxCount?, we needed to ceil, or else some cases would be zero
    public var duration:TimeInterval /*in seconds*/
-   var onComplete:() -> Void
+   public var onComplete:() -> Void
    public init(duration:TimeInterval, onChange:@escaping () -> Void = {/*Swift.print("TimerAnimator.onChange")*/}, onComplete:@escaping () -> Void = {/*Swift.print("TimerAnimator.onComplete")*/}) {
       self.duration = duration
       self.onComplete = onComplete
@@ -55,7 +55,7 @@ extension TimeAnimator {
    /**
     * Util method for interpolating between values
     */
-   public static func Interpolate(from:CGFloat, to:CGFloat, fraction:CGFloat) -> CGFloat{
+   public static func interpolate(from:CGFloat, to:CGFloat, fraction:CGFloat) -> CGFloat{
       return fraction * (to - from) + from
    }
 }

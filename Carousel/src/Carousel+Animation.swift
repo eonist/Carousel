@@ -46,7 +46,7 @@ extension Carousel{
       animator.from = from
       animator.to = to
       animator.tick = {
-         let x = TimeAnimator.Interpolate(from: self.animator.from, to: self.animator.to, fraction: self.animator.progress)
+         let x = TimeAnimator.interpolate(from: self.animator.from, to: self.animator.to, fraction: self.animator.progress)
          self.moveCards(x: x)
       }
       animator.onComplete = {//quick hack so that the click withouth movment works. , should be solved elsewhere 
