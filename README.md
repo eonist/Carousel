@@ -11,4 +11,4 @@ Carousel is a small framework that enables you to gesture between views.
 
 ### Todo's
 - Implement appeared and disappeared methods
-- Upgrade TimeAnimator to Chaplin 
+- Upgrade TimeAnimator to Chaplin
