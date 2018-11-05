@@ -1,9 +1,9 @@
 {
-  "commitish" : "b08f73631d9b6f54944674de677904fea01c719f",
+  "commitish" : "4886987ca83f96bb7b6128237a6659e042b6b54a",
   "iOS" : [
     {
       "name" : "Spatial",
-      "hash" : "52a1d4b6a042f843f196b126bdb6f1a9d62159e73705046335bfb204cd6a9336"
+      "hash" : "363c73a0835e231a16b2731e8ad77e353bac06faf5aa601d348f7239c9ea5f77"
     }
   ]
 }
