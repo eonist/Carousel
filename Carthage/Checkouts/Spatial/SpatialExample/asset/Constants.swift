@@ -3,6 +3,7 @@ import UIKit
 /**
  * Move to own class, margins, insets etc
  * TIPS: Access all colors via: Constants.Colors.allCases
+ * EXAMPLE: Constants.Colors.allCases[1]//UIColor.yellow
  */
 class Constants{
    enum Colors:String,CaseIterable{
